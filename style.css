@@ -14,12 +14,20 @@ body{background-color: #d6d7db;}
     display: flex;
 }
 .current{
-    border: 1px blue solid;
+    /* border: 1px blue solid; */
     width: 25%;
     border-radius: 40px 0 0 40px;
+    background-color: #fff;
+    padding: 1em;
 }
 .forecast{
-    border: 1px blue solid;
+    /* border: 1px blue solid; */
     width: 75%;
     border-radius: 0 40px 40px 0;
+    background-color: #f6f6f9;
+    padding: 1em;
+}
+#form{
+    display: flex;
+    justify-content: space-between;
 }
