@@ -1,0 +1,25 @@
+html{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+  }
+  
+  *, *:after, *:before{
+    box-sizing: inherit;
+  }
+body{background-color: #d6d7db;}
+/* Assets */
+.outer_container{
+    width: 85%; 
+    margin: 0 auto;
+    display: flex;
+}
+.current{
+    border: 1px blue solid;
+    width: 25%;
+    border-radius: 40px 0 0 40px;
+}
+.forecast{
+    border: 1px blue solid;
+    width: 75%;
+    border-radius: 0 40px 40px 0;
+}
