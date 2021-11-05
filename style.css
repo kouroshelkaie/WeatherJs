@@ -43,7 +43,7 @@ body{background-color: #d6d7db;}
 }
 .forecast_daily{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 3em 0;
 }
 .daily{

@@ -39,11 +39,15 @@ const current = (data)=>{
   currentUi(currentData)
 }
 
+// daily weather data
+const daily = (data)=>{
+  let dailyData = data.daily
+  
+  dailyUi(dailyData)
+}
 
-
-
+// hourly weather data
 const hourly = (data)=>{}
-const daily = (data)=>{}
 
 
 // generate number to weekDays
