@@ -25,15 +25,31 @@ async function getForecast(lat,long) {
     daily(data)
 }
 
+// current weather data
 const current = (data)=>{
-  let location = inputValue.value
-  let timezone = data.timezone
-  let temp = Math.round(data.current.temp)
-  let description = data.current.weather[0].description
-  let humidity = data.current.humidity
-  let now = new Date(data.current.dt * 1000)
-  
-  currentUi(location,timezone,temp,description,humidity,now)
+  let currentData = {
+    icon : data.current.weather[0].icon,
+    location : inputValue.value,
+    timezone : data.timezone,
+    temp : Math.round(data.current.temp),
+    description : data.current.weather[0].description,
+    humidity : data.current.humidity,
+    now : new Date(data.current.dt * 1000)
+  }
+  currentUi(currentData)
 }
+
+
+
+
 const hourly = (data)=>{}
 const daily = (data)=>{}
+
+
+// generate number to weekDays
+const weekDay = (counterNumber)=>{
+  let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  let dayOfWeek = days[counterNumber]
+  return dayOfWeek
+}
+
