@@ -76,3 +76,14 @@ body{background-color: #d6d7db;}
     border-radius: 5%;
     color: #d6d7db;
 }
+.hourly_items{
+    background-color: rgb(94, 94, 94);
+    margin: 0 .5em;
+    padding: .5em;
+    border-radius: 5%;
+    color: #d6d7db;
+    font-size: 1em;
+}
+.hourly_icon{
+    width: 1em;
+}

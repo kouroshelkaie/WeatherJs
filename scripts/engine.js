@@ -47,7 +47,10 @@ const daily = (data)=>{
 }
 
 // hourly weather data
-const hourly = (data)=>{}
+const hourly = (data)=>{
+  let hourlyData = data.hourly
+  hourlyUi(hourlyData)
+}
 
 
 // generate number to weekDays
