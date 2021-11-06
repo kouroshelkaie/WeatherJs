@@ -59,3 +59,20 @@ body{background-color: #d6d7db;}
     padding: .5em;
     border: 1px solid red;
 }
+
+
+
+
+
+
+.daily_icon{
+    width: 5em;
+}
+
+.daily_items{
+    background-color: rgb(94, 94, 94);
+    margin: 0 .5em;
+    padding: 1em;
+    border-radius: 5%;
+    color: #d6d7db;
+}

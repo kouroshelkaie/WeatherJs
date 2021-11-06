@@ -26,13 +26,17 @@ const currentUi = (dataValues)=>{
 
 // daily Data on dom
 const dailyUi = (dailyValues)=>{
-    dailyValues.forEach((item)=>{
+    dailyContainer.innerHTML = ""
+    console.log(dailyValues)
+    dailyValues.slice(1,8).forEach((item)=>{
         let dailyWrapper = document.createElement('div')
         dailyWrapper.classList.add('daily_items')
+
         dailyWrapper.innerHTML = `
-            <span class="daily_counter">${item.dt}</span>
+            <span class="daily_counter">${weekDay(new Date(item.dt * 1000).getDay())}</span>
             <img src="http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png" class="daily_icon"></img>
-            <span class ="daily_temp">${Math.round(item.temp.day)}&deg;</span>
+            <span class="daily_description">${item.weather[0].main}</span>
+            <span class="daily_temp">${Math.round(item.temp.day)}&deg;</span>
          `
          dailyContainer.appendChild(dailyWrapper)
     })
