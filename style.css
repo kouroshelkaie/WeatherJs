@@ -33,7 +33,7 @@ body{
     font-size: 1.5em;
     width: 100%;
     border-bottom: 1px solid #fff;
-    padding: .3em 1;
+    padding: 0em .5em;
     font-family: 'Raleway';
 }
 .input_value::placeholder{
@@ -43,6 +43,7 @@ body{
 .input_value:focus{
     outline: none;
 }
+
 #form>button{
     color: #fff;
     background: transparent;
@@ -70,7 +71,7 @@ body{
     display: flex;
     justify-content: space-between;
     color: #fff;
-    margin: 2em 0;
+    margin: 4em 0;
     text-align: center;
 }
 .current_icon{
@@ -129,10 +130,11 @@ body{
 .hourly_icon{
     width: 3em;
 }
-
-
 .cicon{
     color: #fff;
     font-size: 2em;
     margin: .5em;
+}
+.datitle{
+    font-size: .18em;
 }

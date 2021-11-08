@@ -61,4 +61,3 @@ const weekDay = (counterNumber)=>{
   let dayOfWeek = days[counterNumber]
   return dayOfWeek
 }
-

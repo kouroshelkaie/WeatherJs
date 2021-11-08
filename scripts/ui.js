@@ -21,7 +21,7 @@ const currentUi = (dataValues)=>{
     currentTemp.innerHTML = `${dataValues.temp}&deg;c`
     currentDescription.textContent = dataValues.description;
     currentHumidity.innerHTML = `<i class="fa fa-tint cicon"></i><br>${dataValues.humidity}%`;
-    currentLocation.textContent = dataValues.location.toUpperCase();
+    currentLocation.innerHTML = `${dataValues.location.toUpperCase()}<br><span class="datitle">${dataValues.now}</span>`;
     currentTimezone.innerHTML = `<div class="fa fa-clock cicon"></div> <br>${dataValues.timezone}`;
     let date = dataValues.now.getDay() 
     currentDate.innerHTML = `<i class="fa fa-calendar cicon"></i><br>${weekDay(date)}`
