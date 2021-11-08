@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeatherJs</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="scripts/app.js" defer></script>
@@ -14,35 +14,40 @@
 </head>
 <body>
     <div class="outer_container">
+        <!-- form -->
+        <form id="form">
+            <input type="text" class="input_value" name="cityInput" placeholder="Search for places . . .">
+            <button><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+        <!-- current section -->
         <div class="current">
-
-            <form id="form">
-                <input type="text" class="input_value" name="cityInput" placeholder="Search for places...">
-                <button><i class="fa fa-search" aria-hidden="true"></i></button>
-            </form>
-
-            <div class="current_location"></div>
-            <span class="current_temp"></span>
-            <img class="current_icon"></img>
-            <div class="current_description"></div>
-            <div class="current_humidity"></div>
-            <span class="current_timezone"></span>
-            <div class="current_date"></div>
-
+            <div class="current_place">
+                <div class="current_location"></div>
+                <div class="current_temp"></div>
+            </div>
+            <div class="current_details">
+                <div class="current_seturation">
+                    <img class="current_icon"></img>
+                    <div class="current_description"></div>
+                </div>
+                <span class="current_timezone"></span>
+                <div class="current_date"></div>
+                <div class="current_humidity"></div>
+            </div>
         </div>
         <!-- ========= -->
         <div class="forecast">
 
             <div class="forecast_header">
-                <div class="forecast_title">Week</div>
+                <div class="forecast_title">Today</div>
                 <div class="theme">
-                    <span>Dark Mode</span>
-                    <input type="checkbox">
+                    <!-- <span>Dark Mode</span> -->
+                    <!-- <input type="checkbox"> -->
                 </div>
             </div>
 
             <div class="forecast_hourly"></div>
-            <div class="forecast_main">Today</div>
+            <div class="forecast_main">Week</div>
             <div class="forecast_daily"></div>
         </div>
     </div>
