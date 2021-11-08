@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeatherJs</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <script src="scripts/app.js" defer></script>
     <script src="scripts/engine.js" defer></script>
     <script src="scripts/ui.js" defer></script>
@@ -21,18 +21,22 @@
         </form>
         <!-- current section -->
         <div class="current">
+
             <div class="current_place">
                 <div class="current_location"></div>
                 <div class="current_temp"></div>
             </div>
+
             <div class="current_details">
                 <div class="current_seturation">
                     <img class="current_icon"></img>
                     <div class="current_description"></div>
-                </div>
-                <span class="current_timezone"></span>
+                </div>     
                 <div class="current_date"></div>
-                <div class="current_humidity"></div>
+                <div class="current_timezone"></div>           
+                <div class="current_humidity" title="humidity"></div>
+                <div class="current_uvi"></div>
+                <div class="current_wind"></div>
             </div>
         </div>
         <!-- ========= -->

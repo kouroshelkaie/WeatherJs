@@ -34,7 +34,9 @@ const current = (data)=>{
     temp : Math.round(data.current.temp),
     description : data.current.weather[0].description,
     humidity : data.current.humidity,
-    now : new Date(data.current.dt * 1000)
+    now : new Date(data.current.dt * 1000),
+    uvi : data.current.uvi,
+    wind : data.current.wind_speed,
   }
   currentUi(currentData)
 }

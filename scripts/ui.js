@@ -6,6 +6,8 @@ const currentHumidity = document.querySelector('.current_humidity')
 const currentLocation = document.querySelector('.current_location')
 const currentTimezone = document.querySelector('.current_timezone')
 const currentDate = document.querySelector('.current_date')
+const currentUvi = document.querySelector('.current_uvi')
+const currentWind = document.querySelector('.current_wind')
 
 // Daily nodes taken
 const dailyContainer = document.querySelector('.forecast_daily')
@@ -16,13 +18,15 @@ const hourlyContainer = document.querySelector('.forecast_hourly')
 const currentUi = (dataValues)=>{
     let unicode = dataValues.icon
     currentIcon.setAttribute("src",`http://openweathermap.org/img/wn/${unicode}@2x.png`)
-    currentTemp.textContent = dataValues.temp;
+    currentTemp.innerHTML = `${dataValues.temp}&deg;c`
     currentDescription.textContent = dataValues.description;
-    currentHumidity.textContent = dataValues.humidity;
-    currentLocation.textContent = dataValues.location;
-    currentTimezone.textContent = dataValues.timezone;
-    let date = dataValues.now.getDay()
-    currentDate.textContent = weekDay(date)
+    currentHumidity.innerHTML = `<i class="fa fa-tint cicon"></i><br>${dataValues.humidity}%`;
+    currentLocation.textContent = dataValues.location.toUpperCase();
+    currentTimezone.innerHTML = `<div class="fa fa-clock cicon"></div> <br>${dataValues.timezone}`;
+    let date = dataValues.now.getDay() 
+    currentDate.innerHTML = `<i class="fa fa-calendar cicon"></i><br>${weekDay(date)}`
+    currentUvi.innerHTML = `<i class="fa fa-sun cicon"></i><br>${dataValues.uvi}`
+    currentWind.innerHTML = `<i class="fas fa-wind cicon"></i><br> ${dataValues.wind}`
 }
 
 // daily Data on dom

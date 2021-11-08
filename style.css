@@ -34,6 +34,7 @@ body{
     width: 100%;
     border-bottom: 1px solid #fff;
     padding: .3em 1;
+    font-family: 'Raleway';
 }
 .input_value::placeholder{
     color: #fff;
@@ -51,17 +52,15 @@ body{
 
 /* current======== */
         /* current_place */
-.current{
-    margin: 3em 0;
-    padding-right:5em;
-}
+
 .current_place{
     display: flex;
     justify-content: space-between;
     color: #f1f1f1;
 }
 .current_location{
-    font-size: 6em;
+    margin-top: .3em;
+    font-size: 4.5em;
 }
 .current_temp{
     font-size: 7em;
@@ -71,6 +70,8 @@ body{
     display: flex;
     justify-content: space-between;
     color: #fff;
+    margin: 2em 0;
+    text-align: center;
 }
 .current_icon{
     width: 4em;
@@ -127,4 +128,11 @@ body{
 }
 .hourly_icon{
     width: 3em;
+}
+
+
+.cicon{
+    color: #fff;
+    font-size: 2em;
+    margin: .5em;
 }
