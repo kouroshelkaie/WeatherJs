@@ -9,6 +9,10 @@ const currentDate = document.querySelector('.current_date')
 const currentUvi = document.querySelector('.current_uvi')
 const currentWind = document.querySelector('.current_wind')
 
+const forecastTitle = document.querySelector('.forecast_title')
+const forecastMain = document.querySelector('.forecast_main')
+
+
 // Daily nodes taken
 const dailyContainer = document.querySelector('.forecast_daily')
 const hourlyContainer = document.querySelector('.forecast_hourly')
@@ -27,7 +31,38 @@ const currentUi = (dataValues)=>{
     currentDate.innerHTML = `<i class="fa fa-calendar cicon"></i><br>${weekDay(date)}`
     currentUvi.innerHTML = `<i class="fa fa-sun cicon"></i><br>${dataValues.uvi}`
     currentWind.innerHTML = `<i class="fas fa-wind cicon"></i><br> ${dataValues.wind}`
+
+    forecastTitle.textContent = "Today"
+    forecastMain.textContent = "Week"
 }
+
+// set 12hr datetime am/pm format
+const doAMPM=(date)=> {
+    let hours = date.getHours();
+    let ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    let strTime = `${hours} ${ampm}`
+    return strTime;
+  }
+
+// hourly Data on dom
+const hourlyUi = (hourlyValues)=>{
+    hourlyContainer.innerHTML = ""
+    console.log(hourlyValues)
+    hourlyValues.slice(1,15).forEach((item)=>{
+        let hourlyWrapper = document.createElement('div')
+        hourlyWrapper.classList.add('hourly_items')
+
+        hourlyWrapper.innerHTML = `
+        <span class="hourly_counter">${doAMPM(new Date(item.dt * 1000))}</span>
+        <img src="http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png" class="hourly_icon"></img>
+        <span class="hourly_temp">${Math.round(item.temp)}&deg;c</span>
+        `
+        hourlyContainer.appendChild(hourlyWrapper)
+    })
+}
+
 
 // daily Data on dom
 const dailyUi = (dailyValues)=>{
@@ -40,25 +75,11 @@ const dailyUi = (dailyValues)=>{
             <span class="daily_counter">${weekDay(new Date(item.dt * 1000).getDay())}</span>
             <img src="http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png" class="daily_icon"></img>
             <span class="daily_description">${item.weather[0].main}</span>
-            <span class="daily_temp">${Math.round(item.temp.day)}&deg;</span>
+            <span class="daily_temp">${Math.round(item.temp.day)}&deg;c</span>
          `
          dailyContainer.appendChild(dailyWrapper)
     })
 }
 
-// hourly Data on dom
-const hourlyUi = (hourlyValues)=>{
-    hourlyContainer.innerHTML = ""
-    console.log(hourlyValues)
-    hourlyValues.slice(1,15).forEach((item)=>{
-        let hourlyWrapper = document.createElement('div')
-        hourlyWrapper.classList.add('hourly_items')
 
-        hourlyWrapper.innerHTML = `
-        <span class="hourly_counter">${new Date(item.dt * 1000).getHours()}</span>
-        <img src="http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png" class="hourly_icon"></img>
-        <span class="hourly_temp">${Math.round(item.temp)}&deg;</span>
-        `
-        hourlyContainer.appendChild(hourlyWrapper)
-    })
-}
+
