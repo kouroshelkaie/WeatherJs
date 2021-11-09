@@ -54,8 +54,7 @@ const doAMPM = (date) => {
 // hourly Data on dom
 const hourlyUi = (hourlyValues) => {
   hourlyContainer.innerHTML = "";
-  console.log(hourlyValues);
-  hourlyValues.slice(1, 15).forEach((item) => {
+  hourlyValues.slice(2,15).forEach((item) => {
     let hourlyWrapper = document.createElement("div");
     hourlyWrapper.classList.add("hourly_items");
 
