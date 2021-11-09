@@ -1,143 +1,124 @@
-html{
-    box-sizing: border-box;
-    margin: 0; padding: 0;
-    border: none;
-  }
-  
-  *, *:after, *:before{
-    box-sizing: inherit;
-  }
-body{
-    background-size: contain;
-    background-image: -webkit-linear-gradient(top, #3b6bee, #3EB9E6);
-    background-image: -moz-linear-gradient(top, #3b6bee, #3EB9E6);
-    background-image: linear-gradient(to bottom, #3b6bee, #3EB9E6);
-    font-family: 'Raleway';
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
-/* Assets */
-.outer_container{
-    padding: 4em 12em;
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
 }
+body {
+  background-size: contain;
+  background-image: -webkit-linear-gradient(top, #3b6bee, #3eb9e6);
+  background-image: -moz-linear-gradient(top, #3b6bee, #3eb9e6);
+  background-image: linear-gradient(to bottom, #3b6bee, #3eb9e6);
+  font-family: "Raleway";
+}
+.outer_container {
+  padding: 2em 12em;
+}
+
 /* form */
-#form{
-    display: flex;
-    justify-content: space-between;
-} 
-
-.input_value{
-    background: transparent;
-    border: none;
-    color: #fff;
-    font-size: 1.5em;
-    width: 100%;
-    border-bottom: 1px solid #fff;
-    padding: 0em .5em;
-    font-family: 'Raleway';
-}
-.input_value::placeholder{
-    color: #fff;
-    font-family: 'Raleway';
-}
-.input_value:focus{
-    outline: none;
+#form {
+  display: flex;
+  justify-content: space-between;
 }
 
-#form>button{
-    color: #fff;
-    background: transparent;
-    border: none;
-    font-size: 1.5em;
+.input_value {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  padding: 0em 0.5em;
+  font-family: "Raleway";
+}
+.input_value::placeholder {
+  color: #fff;
+  font-family: "Raleway";
+}
+.input_value:focus {
+  outline: none;
 }
 
 /* current======== */
-        /* current_place */
+/* current_place */
 
-.current_place{
-    display: flex;
-    justify-content: space-between;
-    color: #f1f1f1;
+.current_place {
+  display: flex;
+  justify-content: space-between;
+  color: #f1f1f1;
 }
-.current_location{
-    margin-top: .3em;
-    font-size: 4.5em;
+.current_location {
+  margin-top: 0.3em;
+  font-size: 4.5em;
 }
-.current_temp{
-    font-size: 7em;
+.datitle {
+  font-size: 0.18em;
 }
-    /* current_details */
-.current_details{
-    display: flex;
-    justify-content: space-between;
-    color: #fff;
-    margin: 2em 0em 5em 0em;
-    text-align: center;
+.current_temp {
+  font-size: 7em;
 }
-.current_icon{
-    width: 4em;
+/* current_details */
+.current_details {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  margin: 2em 0em 5em 0em;
+  text-align: center;
+}
+.current_icon {
+  width: 4em;
+}
+.cicon {
+  color: #fff;
+  font-size: 2em;
+  margin: 0.5em;
 }
 
 /* forecast======= */
-
-.forecast_header{
-    display: flex;
-    justify-content: space-between;
+.forecast_title,
+.forecast_main {
+  color: #fff;
+  font-size: 1.2em;
+  margin-left: 0.5em;
+  margin-bottom: 0.7em;
 }
-.forecast_daily{
-    display: flex;
-    justify-content: space-between;
+/* forecast hourly */
+.forecast_hourly {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3em;
 }
-.daily{
-    padding: .5em;
-    border: 1px solid red;
+.hourly_items {
+  background-color: #e2e2e2;
+  margin: 0 0.5em;
+  padding: 0.5em;
+  border-radius: 4%;
+  font-size: 1em;
+  text-align: center;
 }
-.forecast_hourly{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 3em;
-}
-.hourly{
-    padding: .5em;
-    border: 1px solid red;
-}
-.forecast_title ,
-.forecast_main{
-    color: #fff;
-    font-size: 1.2em;
-    margin-left: .5em;
-    margin-bottom: .7em;
+.hourly_icon {
+  width: 3em;
 }
 
-
-
-
-
-.daily_icon{
-    width: 5em;
+/* forecast daily */
+.forecast_daily {
+  display: flex;
+  justify-content: space-between;
+}
+.daily_icon {
+  width: 5em;
 }
 
-.daily_items{
-    margin: 0 .5em;
-    background-color: #e2e2e2;
-    padding: 1em;
-    border-radius: 5%;
-    text-align: center;
-}
-.hourly_items{
-    background-color: #e2e2e2;
-    margin: 0 .5em;
-    padding: .5em;
-    border-radius: 5%;
-    font-size: 1em;
-    text-align: center;
-}
-.hourly_icon{
-    width: 3em;
-}
-.cicon{
-    color: #fff;
-    font-size: 2em;
-    margin: .5em;
-}
-.datitle{
-    font-size: .18em;
+.daily_items {
+  margin: 0 0.5em;
+  background-color: #e2e2e2;
+  padding: 1em;
+  border-radius: 4%;
+  text-align: center;
 }
