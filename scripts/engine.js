@@ -4,7 +4,7 @@ const type = "month";
 // generate geographic latitude and longitude api
 async function getLatLong(input) {
   let response = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${myKey}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${myKey}`
   );
   let data = await response.json();
   let lat = data.coord.lat;

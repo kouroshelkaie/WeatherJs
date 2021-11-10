@@ -21,7 +21,7 @@ const currentUi = (dataValues) => {
   let unicode = dataValues.icon;
   currentIcon.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${unicode}@2x.png`
+    `https://openweathermap.org/img/wn/${unicode}@2x.png`
   );
   currentTemp.innerHTML = `${dataValues.temp}&deg;c`;
   currentDescription.textContent = dataValues.description;
@@ -60,7 +60,7 @@ const hourlyUi = (hourlyValues) => {
 
     hourlyWrapper.innerHTML = `
         <span class="hourly_counter">${doAMPM(new Date(item.dt * 1000))}</span>
-        <img src="http://openweathermap.org/img/wn/${
+        <img src="https://openweathermap.org/img/wn/${
           item.weather[0].icon
         }@2x.png" class="hourly_icon"></img>
         <span class="hourly_temp">${Math.round(item.temp)}&deg;c</span>
@@ -80,7 +80,7 @@ const dailyUi = (dailyValues) => {
             <span class="daily_counter">${weekDay(
               new Date(item.dt * 1000).getDay()
             )}</span>
-            <img src="http://openweathermap.org/img/wn/${
+            <img src="https://openweathermap.org/img/wn/${
               item.weather[0].icon
             }@2x.png" class="daily_icon"></img>
             <span class="daily_description">${item.weather[0].main}</span>
