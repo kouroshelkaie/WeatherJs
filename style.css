@@ -263,12 +263,13 @@ background-repeat: no-repeat;
   color: #fff;
 }
 /* MadeBy */
-.made_by ,
-.made_by a
+
+.made_by>a
 {
   color: #fff;
 }
 .made_by{
+  color: #f1f1f1;
   position: fixed;
   right: 0%; bottom: 0%;
   padding: 10px;
