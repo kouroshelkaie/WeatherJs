@@ -11,6 +11,7 @@ html {
   box-sizing: inherit;
 }
 body {
+  height: 100vh;
  overflow: hidden;
 background-repeat: no-repeat;
   background-size: 100%;
@@ -134,7 +135,7 @@ background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
   color: #fff;
-  margin: 0em 0em 7em 0em;
+  margin: 0em 0em 6em 0em;
   text-align: center;
 }
 @media(max-width:750px){
@@ -185,6 +186,9 @@ background-repeat: no-repeat;
   .forecast_hourly::-webkit-scrollbar{
     display: none;
   }
+  .forecast_hourly::scrollbar{
+    display: none;
+  }
 }
 .hourly_items {
   margin: 0 0.2em;
@@ -222,6 +226,7 @@ background-repeat: no-repeat;
 .forecast_daily {
   display: flex;
   justify-content: center;
+  /* margin-bottom: 2em; */
 }
 @media(max-width:650px){
   .forecast_daily{
@@ -256,4 +261,18 @@ background-repeat: no-repeat;
   border-radius: 4%;
   text-align: center;
   color: #fff;
+}
+/* MadeBy */
+.made_by ,
+.made_by a
+{
+  color: #fff;
+}
+.made_by{
+  position: fixed;
+  right: 0%; bottom: 0%;
+  padding: 10px;
+  font-size: .6em;
+  margin-top: 3em;
+  letter-spacing: 1px;
 }
