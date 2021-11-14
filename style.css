@@ -11,12 +11,10 @@ html {
   box-sizing: inherit;
 }
 body {
-  height: 100vw;
 background-repeat: no-repeat;
-  background-size: 100%;
-  background: -webkit-linear-gradient(top, #3b6bee, #3eb9e6);
-  background: -moz-linear-gradient(top, #3b6bee, #3eb9e6);
-  background: linear-gradient(to bottom, #3b6bee, #3eb9e6);
+background-size: contain;
+  background: rgb(62,185,230);
+  background: linear-gradient(0deg, rgba(62,185,230,1) 0%, rgb(59, 107, 238) 100%);
   font-family: "Raleway";
 }
 .outer_container {
@@ -40,7 +38,7 @@ background-repeat: no-repeat;
 }
 @media (max-width:600px) {
     .outer_container{
-        padding: 2em 0em;
+        padding: 2em;
     }
 }
 .input_value {
@@ -180,7 +178,7 @@ background-repeat: no-repeat;
   .forecast_hourly{
     overflow-x: scroll;
     justify-content: start;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
   .forecast_hourly::-webkit-scrollbar{
     display: none;

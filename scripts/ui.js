@@ -89,3 +89,6 @@ const dailyUi = (dailyValues) => {
     dailyContainer.appendChild(dailyWrapper);
   });
 };
+
+
+
