@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   border: none;
 }
 
@@ -38,9 +38,10 @@ background-size: contain;
 }
 @media (max-width:600px) {
     .outer_container{
-        padding: 2em;
+        padding: .2em;
     }
 }
+
 .input_value {
   background: transparent;
   border: none;
@@ -222,21 +223,36 @@ background-size: contain;
 /* forecast daily */
 .forecast_daily {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   /* margin-bottom: 2em; */
 }
 @media(max-width:650px){
   .forecast_daily{
-    overflow-x: scroll;
-    justify-content: start;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
   }
-  .forecast_daily::-webkit-scrollbar{
+  .daily_items{
+    display: flex;
+    justify-content: space-between;
+  }
+  .daily_items br{
     display: none;
   }
+  .daily_items > span{
+    font-size: 1.5em;
+  }
 }
+
+
 .daily_icon {
   width: 5em;
 }
+@media(max-width:650px) {
+  .daily_icon{
+    width: 2em;
+  }
+}
+
 @media(max-width:900px) {
     .daily_items{
         font-size: .8em
@@ -252,6 +268,7 @@ background-size: contain;
     font-size: .6em;
   }
 }
+
 .daily_items {
   margin: 0 0.5em;
   padding: 1em;
@@ -264,9 +281,10 @@ background-size: contain;
 .made_by>a
 {
   color: #fff;
+  text-decoration: none;
 }
 .made_by{
-  color: #f1f1f1;
+  color: #fff;
   position: fixed;
   right: 0%; bottom: 0%;
   padding: 10px;
@@ -274,3 +292,5 @@ background-size: contain;
   margin-top: 3em;
   letter-spacing: 1px;
 }
+
+

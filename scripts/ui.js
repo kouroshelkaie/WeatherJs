@@ -72,17 +72,19 @@ const hourlyUi = (hourlyValues) => {
 // daily Data on dom
 const dailyUi = (dailyValues) => {
   dailyContainer.innerHTML = "";
-  dailyValues.slice(1, 8).forEach((item) => {
+  dailyValues.slice(1, 10).forEach((item) => {
     let dailyWrapper = document.createElement("div");
     dailyWrapper.classList.add("daily_items");
 
     dailyWrapper.innerHTML = `
-            <span class="daily_counter">${weekDay(
-              new Date(item.dt * 1000).getDay()
-            )}</span>
             <img src="https://openweathermap.org/img/wn/${
               item.weather[0].icon
-            }@2x.png" class="daily_icon"></img>
+            }@2x.png" class="daily_icon"></img><br>
+
+            <span class="daily_counter">${weekDay(
+              new Date(item.dt * 1000).getDay()
+            )}</span><br>
+
             <span class="daily_description">${item.weather[0].main}</span>
             <span class="daily_temp">${Math.round(item.temp.day)}&deg;c</span>
          `;
