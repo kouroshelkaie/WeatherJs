@@ -12,10 +12,10 @@ form.addEventListener("submit", (e) => {
 // we can't access geolocation from the chrome browser
 // so you should type your own place :)
 
-window.addEventListener("load", () => {
-  navigator.geolocation.getCurrentPosition((pos) => {
-    let la = pos.coords.latitude;
-    let lon = pos.coords.longitude;
-    getForecast(la, lon);
-  });
-});
+// window.addEventListener("load", () => {
+//   navigator.geolocation.getCurrentPosition((pos) => {
+//     let la = pos.coords.latitude;
+//     let lon = pos.coords.longitude;
+//     getForecast(la, lon);
+//   });
+// });
