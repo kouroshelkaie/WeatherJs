@@ -276,21 +276,3 @@ background-size: contain;
   text-align: center;
   color: #fff;
 }
-/* MadeBy */
-
-.made_by>a
-{
-  color: #fff;
-  text-decoration: none;
-}
-.made_by{
-  color: #fff;
-  position: fixed;
-  right: 0%; bottom: 0%;
-  padding: 10px;
-  font-size: .6em;
-  margin-top: 3em;
-  letter-spacing: 1px;
-}
-
-
