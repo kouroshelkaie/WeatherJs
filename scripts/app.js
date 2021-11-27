@@ -5,7 +5,9 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   let inputData = e.target.elements.cityInput.value;
 
-  getLatLong(inputData);
+  form.style.marginTop = 0
+
+  setTimeout(()=>{getLatLong(inputData)},500)
 });
 
 // i commented this section,Because of the boycott of Google APIs in iran
@@ -19,3 +21,5 @@ form.addEventListener("submit", (e) => {
 //     getForecast(la, lon);
 //   });
 // });
+
+

@@ -1,20 +1,21 @@
 // current nodes taken
-const currentIcon = document.querySelector(".current_icon");
-const currentTemp = document.querySelector(".current_temp");
+const currentIcon =        document.querySelector(".current_icon");
+const currentTemp =        document.querySelector(".current_temp");
 const currentDescription = document.querySelector(".current_description");
-const currentHumidity = document.querySelector(".current_humidity");
-const currentLocation = document.querySelector(".current_location");
-const currentTimezone = document.querySelector(".current_timezone");
-const currentDate = document.querySelector(".current_date");
-const currentUvi = document.querySelector(".current_uvi");
-const currentWind = document.querySelector(".current_wind");
+const currentHumidity =    document.querySelector(".current_humidity");
+const currentLocation =    document.querySelector(".current_location");
+const currentTimezone =    document.querySelector(".current_timezone");
+const currentDate =        document.querySelector(".current_date");
+const currentUvi =         document.querySelector(".current_uvi");
+const currentWind =        document.querySelector(".current_wind");
 
-const forecastTitle = document.querySelector(".forecast_title");
-const forecastMain = document.querySelector(".forecast_main");
+const forecastTitle =      document.querySelector(".forecast_title");
+const forecastMain =       document.querySelector(".forecast_main");
 
 // Daily nodes taken
-const dailyContainer = document.querySelector(".forecast_daily");
-const hourlyContainer = document.querySelector(".forecast_hourly");
+const dailyContainer =     document.querySelector(".forecast_daily");
+const hourlyContainer =    document.querySelector(".forecast_hourly");
+
 
 // put current data on dom
 const currentUi = (dataValues) => {
@@ -59,10 +60,10 @@ const hourlyUi = (hourlyValues) => {
     hourlyWrapper.classList.add("hourly_items");
 
     hourlyWrapper.innerHTML = `
-        <span class="hourly_counter">${doAMPM(new Date(item.dt * 1000))}</span>
+        <span class="hourly_counter">${doAMPM(new Date(item.dt * 1000))}</span><br>
         <img src="https://openweathermap.org/img/wn/${
           item.weather[0].icon
-        }@2x.png" class="hourly_icon"></img>
+        }@2x.png" class="hourly_icon"></img><br>  
         <span class="hourly_temp">${Math.round(item.temp)}&deg;c</span>
         `;
     hourlyContainer.appendChild(hourlyWrapper);
@@ -91,6 +92,4 @@ const dailyUi = (dailyValues) => {
     dailyContainer.appendChild(dailyWrapper);
   });
 };
-
-
 

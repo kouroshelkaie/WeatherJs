@@ -41,6 +41,10 @@ background-size: contain;
         padding: .2em;
     }
 }
+#form{
+  margin-top: 15em;
+  transition: all 1s ease;
+}
 
 .input_value {
   background: transparent;
@@ -172,7 +176,7 @@ background-size: contain;
 /* forecast hourly */
 .forecast_hourly {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 3em;
 }
 @media(max-width:600px) {
